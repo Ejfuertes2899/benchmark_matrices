@@ -65,8 +65,6 @@ Las pruebas se ejecutarán en el mismo equipo, un programa a la vez. Se aleatori
 
 Para cada combinación de lenguaje y tamaño, se realizarán ejecuciones de calentamiento que no formarán parte de las 10 mediciones.
 
-Antes de comenzar las mediciones, se probarán los cuatro programas con matrices pequeñas cuyo resultado se haya calculado a mano, para comprobar que multiplican correctamente.
-
 En cada repetición medida se seguirá este procedimiento:
 
 1. **Preparar los datos:** cargar las matrices de entrada y preparar la matriz de salida antes de iniciar el temporizador.
