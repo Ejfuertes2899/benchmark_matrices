@@ -1,0 +1,246 @@
+﻿[
+    {
+        "Id": "sha256:4540c4df00c7ef4c9f5dd414a4caa7ede90e04a8e3438f458b3936691a14b1ac",
+        "RepoTags": [
+            "matrices-cpp:semana3"
+        ],
+        "RepoDigests": [
+            "matrices-cpp@sha256:4540c4df00c7ef4c9f5dd414a4caa7ede90e04a8e3438f458b3936691a14b1ac"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-23T15:46:58.011943321Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEYS=B215C1633BCA0477615F1B35A5B3A004745C015A \tB3C42148A44E6983B3E4CC0793FA9B1AB75C61B8 \t90AA470469D3965A87A5DCB494D03953902C9419 \t80F98B2E0DAB6C8281BDF541A7C8C3B2F71EDF1C \t7F74F97C103468EE5D750B583AB00996FC26A641 \t33C235A34C46AA3FFB293709A328C3A2C3C45C06 \tD3A93CAD751C2AF4F8C7AD516C35B99309B5FA62",
+                "GCC_MIRRORS=https://ftpmirror.gnu.org/gcc \t\thttps://mirrors.kernel.org/gnu/gcc \t\thttps://bigsearcher.com/mirrors/gcc/releases \t\thttp://www.netgull.com/gcc/releases \t\thttps://ftpmirror.gnu.org/gcc \t\thttps://sourceware.org/pub/gcc/releases \t\tftp://ftp.gnu.org/gnu/gcc",
+                "GCC_VERSION=16.2.0"
+            ],
+            "Entrypoint": [
+                "/app/bin/matrices"
+            ],
+            "WorkingDir": "/app"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 2221929958,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:0487fc82d485c6e44b5d5474f45d9740d7009d35040b4f0aad06327293ae5128",
+                "sha256:aa608ab8fe7e2cff3d58e1b2c62622dc68e83b7f2f6bbbd6cb3ed67b50945e3d",
+                "sha256:95bc6b7f78204d135ef84a8299c1ad390c09dd29d76a206fc15080c945fa5114",
+                "sha256:e45023dffebe5f63b91ad04c58c24a1288b8e2e99bd97928f9299c0a26d056fd",
+                "sha256:c0581ca29bf94fd370fb4f2dcda1f02786fd7e89ba2a51bfaf1c0da10ee97127",
+                "sha256:83393428900e4f08dc570f97bfa4fe25cda8cc658e56efc0a63ee1a4576a564a",
+                "sha256:e8a58b4e7fc306d8026125a24ca6e54112c6732df6647cb07b61ff1935fc59b5",
+                "sha256:17e75e98ad11b344ed06f5e06006fd3345f5d41105dbdcbb2aae11beaa8ab534",
+                "sha256:7f87b14a797198568a31c8907d614400e9bdd10a9a5032365f6d38e005dc1e93",
+                "sha256:f5f2a4cc09fa0fe6cf8b43724bd9fa42f3b348fedba6703b224c77574370f3ef",
+                "sha256:8c4cac4992b519e05e93fa3f3fb6c1b85faa09026a2e4180a41d17b176183b2e",
+                "sha256:ec26b3bee65546896100b4f18088be22cd805d449888fa3bdfdc67bf2bd06792"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-23T15:47:00.787555781Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:4540c4df00c7ef4c9f5dd414a4caa7ede90e04a8e3438f458b3936691a14b1ac",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "pv8onqr01kl1jesnprnvo7k5m",
+                    "CreatedAt": "2026-10-23T15:47:00.952629887Z"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:93445502a7c7a0ca44e0b30031001af2741c0194983f709924ef47c7341bd056",
+        "RepoTags": [
+            "matrices-go:semana3"
+        ],
+        "RepoDigests": [
+            "matrices-go@sha256:93445502a7c7a0ca44e0b30031001af2741c0194983f709924ef47c7341bd056"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-23T15:47:45.688067371Z",
+        "Config": {
+            "Env": [
+                "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOLANG_VERSION=1.27.3",
+                "GOTOOLCHAIN=local",
+                "GOPATH=/go",
+                "GOMAXPROCS=1"
+            ],
+            "Entrypoint": [
+                "/app/bin/matrices"
+            ],
+            "WorkingDir": "/app"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1308768613,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:bff6114e14f43741aabe79549a5c46135d29da921864159fc2ac757d93d96e2e",
+                "sha256:6c33392e2024522fa66db76af1290c71b768ca40607c7624c6b825f618bbbe6e",
+                "sha256:b96b611cc62035632fb10f39e20d3e81b62522f9f1c5f3e680f64cd2eb781622",
+                "sha256:f8305adca36938d3ad57bfa3e4a0b9b678c570f678d70a58cbeb7b8838806885",
+                "sha256:18f1d4d65e2dcd0c975641af4dbcc84b4165b8fe37596492d94f38d87633a5b0",
+                "sha256:0299982060c3d3924fd251d5a876dea89759b784ecfb6762016ce9dfb4e956c8",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:db61aa8f29ae135271cdfafd7e9a8430cf28113e435b6bdeb07ddb16f152d11e",
+                "sha256:0d308285b2db36830b4a1988bd9daac728fbb513a4581faf0c0bc3bc99407d79",
+                "sha256:daf35fe3081dcc181c3205878db69847c0ae13c74aa24da5d34ba412421cc71d",
+                "sha256:a09d1474e0848ebdcfc67544a8de8e734946800dbc699dd5f9c42d411595b685"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-23T15:47:48.576311113Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:93445502a7c7a0ca44e0b30031001af2741c0194983f709924ef47c7341bd056",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "99lpfyzhnhggy0z7cnwc2bo94",
+                    "CreatedAt": "2026-10-23T15:47:48.988097529Z"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:b0e1e5aa8cff0a444f7e8168b8ba306e008144e113d615b7c8690b62b51a05ee",
+        "RepoTags": [
+            "matrices-python:semana3"
+        ],
+        "RepoDigests": [
+            "matrices-python@sha256:b0e1e5aa8cff0a444f7e8168b8ba306e008144e113d615b7c8690b62b51a05ee"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-23T15:48:04.772372486Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.17",
+                "PYTHON_SHA256=bfb74ad39efae27cda510f134ab408e00f9992c56851cfc0b1cdb5646da11599",
+                "PYTHONDONTWRITEBYTECODE=1"
+            ],
+            "Entrypoint": [
+                "python",
+                "-u",
+                "04_programas_matrices/matrices.py"
+            ],
+            "WorkingDir": "/app"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 213017258,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:9b35de7893378218e365c34c2c735fb0032a859112fb7345ca8ea73f9aa1db70",
+                "sha256:eb7bb13e51ba254226024272a53cb9d772f8eb17212b62dd285bad084af31373",
+                "sha256:f4634db04ed93dca6cf508991927459d25594a6d9afc93902f843d3d26c82d5c",
+                "sha256:b98f3af3eaddb49609693bff7c49cf27149150ba4fc491d8e19fe1e0cd61c617",
+                "sha256:c939a829ff9256be03a4cfed4fa8f5741533d94ea30855c336201c059f2cb5ab",
+                "sha256:85e8d7b91a3c32fae77f167921653cb4f8a882c01a99ddc17187cc73f4f2d569",
+                "sha256:c3b20c6574edcf5b8652b68228dd44bd0d0cba77ca4002dd9db092382554d3d7",
+                "sha256:8417d8598e7c1c2cc686b65afaa87e03d1f8b07a8fd7213709ad4136e36b4e4e",
+                "sha256:7b2a48ec242a8cb455136cd1ae99b2c8a332db027b8b0e1ba210ac398404f44f"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-23T15:48:07.792146114Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:b0e1e5aa8cff0a444f7e8168b8ba306e008144e113d615b7c8690b62b51a05ee",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "riqcicilydcxpwnjuuu1cfbaj",
+                    "CreatedAt": "2026-10-23T15:48:07.980676847Z"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:622fec7b775c6a434e15dd13823a02917103faec5ff49c381f98e1ff2be1b672",
+        "RepoTags": [
+            "matrices-java:semana3"
+        ],
+        "RepoDigests": [
+            "matrices-java@sha256:622fec7b775c6a434e15dd13823a02917103faec5ff49c381f98e1ff2be1b672"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-23T15:48:22.350513507Z",
+        "Config": {
+            "Env": [
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/opt/java/openjdk",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "JAVA_VERSION=jdk-21.0.12.1+1"
+            ],
+            "Entrypoint": [
+                "java",
+                "-XX:ActiveProcessorCount=1",
+                "-XX:+UseSerialGC",
+                "-cp",
+                "/app/bin",
+                "Matrices"
+            ],
+            "WorkingDir": "/app",
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 693658200,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16",
+                "sha256:68b6182d2b855710b350fe7a59a81633062a245e1a77b8679c9b4f3439dfd879",
+                "sha256:53407f57584a69b9b0720ec9f8f9eca2fa49d9dd7f586c3a7363209d1a091e94",
+                "sha256:44d8d8dddf91db269c7d9dec0263f94a960a18651f320da996d062baf5e6e25c",
+                "sha256:64ccd62a672180d242b310b4a56f2691b225a2df93e99dc133fb83da88bb2e5b",
+                "sha256:57eddfd9215eaa7d365ffda483d81d93ba8a566360f98ae293fb1512d3cedf90",
+                "sha256:05981832b85754b992014f968b49f976c867dce16a28479636f82f2cf0f34117",
+                "sha256:404f83d77511213bf150df1fcb453b035a219de55c7be06ca918ff35e6bdd691",
+                "sha256:65253ce7c6bc2164210ecd68f4641ae6d42cbb99ce7e33be799373c490209310"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-23T15:48:25.066838021Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:622fec7b775c6a434e15dd13823a02917103faec5ff49c381f98e1ff2be1b672",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "rf50ttu2o7ne0nnx9209rgkhp",
+                    "CreatedAt": "2026-10-23T15:48:25.22066716Z"
+                }
+            ]
+        }
+    }
+]
