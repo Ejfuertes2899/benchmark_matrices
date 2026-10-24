@@ -108,19 +108,6 @@ Se utilizará un **nivel de significancia de 0,05** y se realizarán comparacion
 
 # Experimento de matrices con Docker
 
-**Semana 3 · C++ · Go · Python · Java**
-
-Guía para ejecutar en Windows un experimento de multiplicación de matrices en cuatro lenguajes mediante contenedores Docker. Incluye la preparación del entorno, la ejecución de las pruebas y la revisión de los resultados.
-
-| Característica | Configuración |
-| --- | --- |
-| Lenguajes | C++, Go, Python y Java |
-| Tamaños de las matrices | 500 × 500, 1000 × 1000 y 1500 × 1500 |
-| Combinaciones | 12 bloques: 4 lenguajes × 3 tamaños |
-| Ejecuciones por bloque | 2 calentamientos y 10 mediciones |
-| Mediciones esperadas | 120 en total |
-| Semilla del orden de ejecución | `2027` |
-
 ## Contenido
 
 1. [Preparar el proyecto](#1-preparar-el-proyecto)
