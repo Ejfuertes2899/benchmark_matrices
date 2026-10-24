@@ -134,7 +134,7 @@ Se utilizará un **nivel de significancia de 0,05** y se realizarán comparacion
 
 | Carpeta o archivo | Función |
 | --- | --- |
-| `01_docker` | Contiene las instrucciones para construir los cuatro entornos de ejecución. |
+| `01_docker` | Contiene las instrucciones para preparar y ejecutar los programas con Docker.|
 | `02_caracteristicas_equipo` | Guarda las versiones de las herramientas y el orden de las pruebas. |
 | `03_crear matrices` | Contiene las matrices, sus controles y el programa para generarlas. |
 | `04_programas_matrices` | Contiene las implementaciones en los cuatro lenguajes. |
