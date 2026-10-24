@@ -142,7 +142,7 @@ Se utilizará un **nivel de significancia de 0,05** y se realizarán comparacion
 | `06_revisión de archivos` | Contiene el programa que comprueba las entradas y los resultados. |
 | `ejecutar_experimento.ps1` | Organiza y ejecuta el experimento completo. |
 | `capturar_versiones.ps1` | Guarda las versiones de los lenguajes y de Docker. |
-| `.dockerignore` | Indica qué archivos se excluyen al construir las imágenes. Puede aparecer oculto. |
+| `.dockerignore` | Indica qué archivos se excluyen al construir las imágenes. |
 
 > **Importante:** conserva los nombres de las carpetas y los archivos, incluidos sus espacios y tildes. Los programas utilizan esas rutas.
 
