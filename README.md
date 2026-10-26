@@ -144,7 +144,7 @@ Se utilizará un **nivel de significancia de 0,05** y se realizarán comparacion
 | `capturar_versiones.ps1` | Guarda las versiones de los lenguajes y de Docker. |
 | `.dockerignore` | Indica qué archivos se excluyen al construir las imágenes. |
 
-> **Importante:** conserva los nombres de las carpetas y los archivos, incluidos sus espacios y tildes. Los programas utilizan esas rutas.
+> **Importante:** conserva los nombres de las carpetas y los archivos. Los programas utilizan esas rutas.
 
 ## 2. Configurar WSL 2
 
