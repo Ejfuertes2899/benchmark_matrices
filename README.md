@@ -178,6 +178,9 @@ La carpeta raíz del proyecto se denomina `avance_semana4/`.
 
 **Conserva los nombres de los archivos y las carpetas**, incluidos los espacios, las tildes y las mayúsculas. Cuando una ruta contiene espacios, escríbela entre comillas, como se muestra en los comandos de esta guía.
 
+>  **Importante:** Antes de la primera ejecución, las carpetas `02_caracteristicas_equipo`, `05_resultados` y `08_analisis` deben contener únicamente su archivo `.gitkeep`.
+> Estos archivos permiten conservar las carpetas en GitHub. Pueden permanecer durante la ejecución, ya que no afectan al funcionamiento del pipeline ni a los resultados del experimento.
+
 <a id="preparacion"></a>
 
 ## 3. Preparación de Windows, WSL y Docker
@@ -750,7 +753,5 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 
 > **Importante:** Mantén Docker Desktop iniciado durante toda la ejecución del pipeline. Puedes minimizar su ventana, pero no salir de la aplicación hasta que termine el proceso.
 
->  **Importante:** Antes de la primera ejecución, las carpetas `02_caracteristicas_equipo`, `05_resultados` y `08_analisis` deben contener únicamente su archivo `.gitkeep`.
-> Estos archivos permiten conservar las carpetas en GitHub. Pueden permanecer durante la ejecución, ya que no afectan al funcionamiento del pipeline ni a los resultados del experimento.
 
 
