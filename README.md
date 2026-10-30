@@ -143,13 +143,6 @@ Se utilizará un **nivel de significancia de 0,05** y se realizarán comparacion
 
 El total corresponde a **4 lenguajes × 3 tamaños × 10 repeticiones = 120 mediciones**. El flujo también contempla ejecuciones de calentamiento previas a las mediciones.
 
-### Antes de comenzar
-
-- Ten disponible la carpeta completa del avance de la semana 4.
-- Utiliza un equipo con Windows compatible con WSL 2 y Docker Desktop. Consulta los [requisitos oficiales de Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/#system-requirements).
-- Mantén una conexión a Internet para instalar las herramientas, las dependencias y las imágenes base.
-- Sigue el orden de la guía y comprueba el resultado de cada etapa antes de continuar.
-
 **Convención de comandos:** la sección 3 indica cuándo utilizar PowerShell o Ubuntu. Desde la sección 4, todos los comandos se ejecutan en la terminal de **Ubuntu**, salvo indicación expresa. Los bloques identificados como «salida esperada» son ejemplos de resultados y no deben ejecutarse.
 
 <a id="estructura"></a>
