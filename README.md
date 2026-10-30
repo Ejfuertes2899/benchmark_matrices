@@ -728,39 +728,10 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 - [ ] Se generaron los registros del equipo y del entorno.
 - [ ] Se revisaron las tablas y los gráficos de `08_analisis/`.
 - [ ] Se leyó `resumen.txt` y se comprobó si se realizaron comparaciones de Tukey.
-
-<a id="nueva-sesion"></a>
-
-## 10. Continuar en una nueva sesión
-
-Cuando vuelvas a trabajar con el proyecto:
-
-1. Abre Docker Desktop y espera a que esté listo.
-2. Abre Ubuntu.
-3. Entra en el proyecto y activa el entorno virtual:
-
-```bash
-cd ~/avance_semana4
-source ~/entornos/semana4/bin/activate
-```
-
-Puedes revisar las tareas pendientes con:
-
-```bash
-snakemake --cores 1 --dry-run
-```
-
-Si corresponde ejecutar tareas pendientes o recuperar salidas incompletas:
-
-```bash
-snakemake --cores 1 --rerun-incomplete
-```
-
-**Este comando no fuerza un experimento nuevo cuando todas las salidas ya están completas y actualizadas.** No es necesario reinstalar las dependencias ni reconstruir las imágenes cada vez que abras una terminal, salvo que hayan cambiado los archivos o la configuración correspondientes.
-
+- [ ] 
 <a id="problemas"></a>
 
-## 11. Solución de problemas
+## 10. Solución de problemas
 
 | Situación | Qué revisar |
 | --- | --- |
@@ -777,13 +748,14 @@ snakemake --cores 1 --rerun-incomplete
 | La revisión final muestra menos de 120 mediciones válidas. | Revisa la salida de Snakemake y `05_resultados/ejecucion.log`; corrige el error antes de volver a ejecutar el flujo. |
 | Snakemake indica que no hay tareas pendientes. | Comprueba si las salidas ya existen y están actualizadas; esto no implica un fallo. |
 
+> **Importante:** Mantén Docker Desktop iniciado durante toda la ejecución del pipeline. Puedes minimizar su ventana, pero no salir de la aplicación hasta que termine el proceso.
+
 <a id="documentacion"></a>
 
-## 12. Documentación oficial
+## 11. Documentación oficial
 
 - [Microsoft — Comandos básicos de WSL](https://learn.microsoft.com/en-us/windows/wsl/basic-commands).
 - [Docker — Instalación de Docker Desktop en Windows](https://docs.docker.com/desktop/setup/install/windows-install/).
 - [Docker — Integración con WSL 2](https://docs.docker.com/desktop/features/wsl/).
 - [Snakemake — Interfaz de línea de comandos](https://snakemake.readthedocs.io/en/stable/executing/cli.html).
 
-> **Importante:** Mantén Docker Desktop iniciado durante toda la ejecución del pipeline. Puedes minimizar su ventana, pero no salir de la aplicación hasta que termine el proceso.
