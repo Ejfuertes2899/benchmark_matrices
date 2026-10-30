@@ -108,12 +108,6 @@ Se utilizará un **nivel de significancia de 0,05** y se realizarán comparacion
 
 # Benchmark de multiplicación de matrices - Pipeline
 
-**Semana 4 · C++ · Go · Python · Java · Docker · Snakemake**
-
-Este proyecto compara los tiempos de ejecución de la multiplicación de matrices en cuatro lenguajes de programación. Utiliza contenedores de Docker para ejecutar los programas y Snakemake para coordinar las mediciones, integrar los resultados y generar el análisis estadístico.
-
-Esta guía explica cómo preparar el entorno en **Windows con Ubuntu en WSL 2**, ejecutar el experimento y comprobar sus resultados.
-
 ## Contenido
 
 - [1. Descripción del experimento](#experimento)
