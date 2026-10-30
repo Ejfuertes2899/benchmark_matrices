@@ -728,7 +728,7 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 - [ ] Se generaron los registros del equipo y del entorno.
 - [ ] Se revisaron las tablas y los gráficos de `08_analisis/`.
 - [ ] Se leyó `resumen.txt` y se comprobó si se realizaron comparaciones de Tukey.
-- [ ] 
+      
 <a id="problemas"></a>
 
 ## 10. Solución de problemas
