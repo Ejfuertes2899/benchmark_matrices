@@ -749,6 +749,8 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 | Snakemake indica que no hay tareas pendientes. | Comprueba si las salidas ya existen y están actualizadas; esto no implica un fallo. |
 
 > **Importante:** Mantén Docker Desktop iniciado durante toda la ejecución del pipeline. Puedes minimizar su ventana, pero no salir de la aplicación hasta que termine el proceso.
+> **Importante:** Antes de la primera ejecución, las carpetas `02_caracteristicas_equipo`, `05_resultados` y `08_analisis` deben contener únicamente su archivo `.gitkeep`.
+> Estos archivos permiten conservar las carpetas en GitHub. Pueden permanecer durante la ejecución, ya que no afectan al funcionamiento del pipeline ni a los resultados del experimento.
 
 <a id="documentacion"></a>
 
