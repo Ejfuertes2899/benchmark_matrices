@@ -754,7 +754,7 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 
 ### 1. Tiempos de multiplicación
 
-Cada fila resume las **10 mediciones** de un lenguaje para un tamaño de matriz. La **media** es el promedio y la **mediana** indica el tiempo central de las mediciones ordenadas. La **desviación estándar** indica cuánto variaron los tiempos entre repeticiones. Los tiempos se expresan en segundos y se muestran con tres decimales.
+Cada fila resume las **10 mediciones** de un lenguaje para un tamaño de matriz.
 
 | Lenguaje | Tamaño (N) | Mediciones | Media (s) | Mediana (s) | Desviación estándar (s) | Mínimo (s) | Máximo (s) |
 |---|---:|---:|---:|---:|---:|---:|---:|
