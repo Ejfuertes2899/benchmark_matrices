@@ -812,13 +812,13 @@ Los tres valores p fueron inferiores a 0,05. Para decidir cómo interpretarlos, 
 
 ![Gráficos de diagnóstico del ANOVA en segundos y en escala logarítmica](08_analisis/diagnostico.png)
 
-Esta figura se encuentra en: 08_analisis/diagnostico.png
-
 Los paneles de la izquierda ayudan a revisar la dispersión de los residuos. En los de la derecha, cuanto más cerca están los puntos de la línea, más se parece su distribución a la normal esperada.
 
 **Los resultados del ANOVA se interpretan como exploratorios.** Incluso después de aplicar el logaritmo, se observaron dos problemas. Las diferencias entre los valores medidos y los estimados por el modelo se alejaron de la forma de campana esperada (Shapiro–Wilk), y los tiempos variaron más entre repeticiones en algunos grupos que en otros (Levene).
 
 Como **Tukey HSD** supone que los grupos tienen una variabilidad similar, se decidió omitir las comparaciones por pares, como por ejemplo C++ frente a Java para N = 1000. Por eso `tukey.csv` contiene solo el encabezado.
+
+Esta figura se encuentra en: 08_analisis/diagnostico.png
 
 
 
