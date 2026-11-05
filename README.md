@@ -773,6 +773,8 @@ Cada fila resume las **10 mediciones** de un lenguaje para un tamaño de matriz.
 
 En esta ejecución, **C++ obtuvo la mediana más baja para N = 500 y N = 1500**, mientras que **Java la obtuvo para N = 1000**. Python registró las medianas más altas en los tres tamaños. Para N = 1500, la mediana fue de unos 12 segundos en C++ y Java, y de unos 8 minutos y 10 segundos en Python. Estos resultados corresponden a las implementaciones y al equipo utilizados en el experimento.
 
+Esta tabla se encuentra: 08_analisis/descriptivos.csv
+
 ### 2. Distribución de los tiempos
 
 Cada caja resume las diez mediciones de un lenguaje para un tamaño determinado. **La línea dentro de la caja indica la mediana** y el ancho de la distribución se aprecia en la altura de la caja. El eje vertical usa una escala logarítmica para que se puedan ver en una misma figura tiempos que van de fracciones de segundo a varios minutos.
