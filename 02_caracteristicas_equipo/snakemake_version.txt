@@ -1,3 +1,0 @@
-Fecha de captura (UTC): 2026-11-05T13:04:52+00:00
-
-Snakemake 9.27.1
