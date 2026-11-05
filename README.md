@@ -106,7 +106,7 @@ Se revisarán los supuestos del **ANOVA de dos factores con interacción** antes
 
 Se utilizará un **nivel de significancia de 0,05** y se realizarán comparaciones **Tukey HSD** cuando corresponda.
 
-# Benchmark de multiplicación de matrices - Pipeline
+# Pasos para reproducir el Benchmark de multiplicación de matrices
 
 ## Contenido
 
