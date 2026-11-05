@@ -1,0 +1,31 @@
+Fecha de captura (UTC): 2026-11-05T13:04:52+00:00
+
+C++ (compilador g++)
+Imagen: matrices-cpp:semana4
+Identificador: sha256:2779ab98c59cac5d8e183849adc3dd807a9f4c5b18a4949a9147d0d1f1488de4
+g++ (GCC) 16.2.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Go
+Imagen: matrices-go:semana4
+Identificador: sha256:0ef850e9fccf134dd48d56e0e837f93bbcddcb3ae2e1cee8789d39ecc2d7de8b
+go version go1.27.3 linux/amd64
+
+Python del contenedor
+Imagen: matrices-python:semana4
+Identificador: sha256:1c6a00410d38081bc16f378e96f621dc15f396100983cadd1f8afba70f812a76
+Python 3.11.17
+
+Java (ejecución)
+Imagen: matrices-java:semana4
+Identificador: sha256:fe68f460c25ab50a7382039d115ce4884446c39962036434ca773a592c597488
+openjdk version "21.0.12.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)
+
+Java (compilador javac)
+Imagen: matrices-java:semana4
+Identificador: sha256:fe68f460c25ab50a7382039d115ce4884446c39962036434ca773a592c597488
+javac 21.0.12.1
