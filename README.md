@@ -808,17 +808,9 @@ Los tres valores p fueron inferiores a 0,05. Para decidir cómo interpretarlos, 
 
 Los paneles de la izquierda ayudan a revisar la dispersión de los residuos. En los de la derecha, cuanto más cerca están los puntos de la línea, más se parece su distribución a la normal esperada.
 
-**Los resultados del ANOVA se interpretan como exploratorios.** Las dos pruebas señalaron problemas con los supuestos incluso después de aplicar el logaritmo. Esto también motivó la decisión de omitir **Tukey HSD**, que se había previsto para comparar pares concretos, como C++ y Java para N = 1000. Tukey usa una estimación común de la variabilidad, que en esta ejecución podía representar mal la incertidumbre de esas comparaciones. Por eso `tukey.csv` conserva únicamente el encabezado.
+**Los resultados del ANOVA se interpretan como exploratorios.** Incluso después de aplicar el logaritmo, se observaron dos problemas. Las diferencias entre los valores medidos y los estimados por el modelo se alejaron de la forma de campana esperada (Shapiro–Wilk), y los tiempos variaron más entre repeticiones en algunos grupos que en otros (Levene).
 
-- [ANOVA sobre el logaritmo del tiempo](08_analisis/anova_log.csv) y [ANOVA en segundos](08_analisis/anova.csv)
-- [Pruebas de supuestos](08_analisis/supuestos.csv) y [resumen del análisis](08_analisis/resumen.txt)
-- [Archivo de Tukey](08_analisis/tukey.csv)
-
-### 5. Datos y condiciones de la ejecución
-
-- [Datos consolidados con las 120 mediciones](05_resultados/benchmark.csv)
-- Mediciones por lenguaje — [C++](05_resultados/cpp.csv), [Go](05_resultados/go.csv), [Java](05_resultados/java.csv) y [Python](05_resultados/python.csv)
-- [Orden de ejecución](05_resultados/orden.csv) y [características del equipo](02_caracteristicas_equipo/caracteristicas_equipo.txt)
+Como **Tukey HSD** supone que los grupos tienen una variabilidad similar, se decidió omitir las comparaciones por pares, como por ejemplo C++ frente a Java para N = 1000. Por eso `tukey.csv` contiene solo el encabezado.
 
 
 
