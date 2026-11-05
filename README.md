@@ -168,13 +168,13 @@ La carpeta raíz del proyecto se denomina `avance_semana4/`.
 | `01_docker/go/` | `Dockerfile` de Go. |
 | `01_docker/python/` | `Dockerfile` de Python. |
 | `01_docker/java/` | `Dockerfile` de Java. |
-| `02_caracteristicas_equipo/` | Inicialmente vacía; recibe los registros del equipo y del entorno. |
+| `02_caracteristicas_equipo/` | Recibe los registros del equipo y del entorno. |
 | `03_crear matrices/` | `crear_matrices.py`, `manifiesto.json` y las subcarpetas `500/`, `1000/` y `1500/`. Cada subcarpeta contiene `a.txt`, `b.txt` y `control.txt`. |
 | `04_programas_matrices/` | `matrices.cpp`, `matrices.go`, `matrices.py` y `Matrices.java`. |
-| `05_resultados/` | Inicialmente vacía; recibe las mediciones y los registros de ejecución. |
+| `05_resultados/` | Recibe las mediciones y los registros de ejecución. |
 | `06_revisión de archivos/` | `revisar_archivos.py`. |
 | `07_workflow/` | `ejecutar.py`, `integrar.py`, `analizar.py` y `registrar_equipo.py`. |
-| `08_analisis/` | Inicialmente vacía; recibe las tablas estadísticas, los gráficos y el resumen. |
+| `08_analisis/` | Recibe las tablas estadísticas, los gráficos y el resumen. |
 
 **Conserva los nombres de los archivos y las carpetas**, incluidos los espacios, las tildes y las mayúsculas. Cuando una ruta contiene espacios, escríbela entre comillas, como se muestra en los comandos de esta guía.
 
@@ -755,22 +755,26 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 
 ## Resultados del experimento
 
-Se comparó el tiempo de multiplicación de matrices en C++, Go, Java y Python para tres tamaños: 500, 1000 y 1500. Se hicieron diez mediciones por cada combinación de lenguaje y tamaño, para un total de **120 mediciones**. Las ejecuciones de calentamiento quedaron fuera de ese total.
-
 ### 1. Tiempos de multiplicación
 
-La tabla muestra la **mediana del tiempo en segundos**. La mediana representa el centro de las diez mediciones ordenadas y ayuda a resumir el tiempo típico de cada grupo.
+Cada fila resume las **10 mediciones** de un lenguaje para un tamaño de matriz. La **media** es el promedio y la **mediana** indica el tiempo central de las mediciones ordenadas. La **desviación estándar** indica cuánto variaron los tiempos entre repeticiones. Los tiempos se expresan en segundos y se muestran con tres decimales.
 
-| Lenguaje | N = 500 | N = 1000 | N = 1500 |
-|---|---:|---:|---:|
-| C++ | 0,120 | 2,338 | 11,659 |
-| Go | 0,189 | 3,207 | 14,772 |
-| Java | 0,133 | 2,242 | 11,856 |
-| Python | 17,782 | 142,330 | 489,964 |
+| Lenguaje | Tamaño (N) | Mediciones | Media (s) | Mediana (s) | Desviación estándar (s) | Mínimo (s) | Máximo (s) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| C++ | 500 | 10 | 0,123 | 0,120 | 0,008 | 0,116 | 0,139 |
+| C++ | 1000 | 10 | 2,346 | 2,338 | 0,025 | 2,318 | 2,398 |
+| C++ | 1500 | 10 | 11,609 | 11,659 | 0,484 | 10,764 | 12,170 |
+| Go | 500 | 10 | 0,195 | 0,189 | 0,017 | 0,180 | 0,237 |
+| Go | 1000 | 10 | 3,226 | 3,207 | 0,137 | 3,028 | 3,552 |
+| Go | 1500 | 10 | 14,800 | 14,772 | 0,098 | 14,688 | 14,963 |
+| Java | 500 | 10 | 0,135 | 0,133 | 0,006 | 0,129 | 0,145 |
+| Java | 1000 | 10 | 2,251 | 2,242 | 0,039 | 2,199 | 2,318 |
+| Java | 1500 | 10 | 12,210 | 11,856 | 0,852 | 11,355 | 13,577 |
+| Python | 500 | 10 | 17,815 | 17,782 | 0,483 | 16,985 | 18,894 |
+| Python | 1000 | 10 | 142,119 | 142,330 | 2,023 | 139,253 | 145,851 |
+| Python | 1500 | 10 | 491,383 | 489,964 | 5,484 | 485,573 | 500,870 |
 
-En esta corrida, **C++ obtuvo la mediana más baja para N = 500 y N = 1500**, mientras que **Java la obtuvo para N = 1000**. Python registró los tiempos más altos en los tres tamaños. Para N = 1500, por ejemplo, la mediana fue de unos 12 segundos en C++ y Java, y de unos 8 minutos y 10 segundos en Python. La comparación corresponde a las implementaciones y al equipo utilizados en el experimento.
-
-[Consultar la tabla descriptiva completa](08_analisis/descriptivos.csv)
+En esta ejecución, **C++ obtuvo la mediana más baja para N = 500 y N = 1500**, mientras que **Java la obtuvo para N = 1000**. Python registró las medianas más altas en los tres tamaños. Para N = 1500, la mediana fue de unos 12 segundos en C++ y Java, y de unos 8 minutos y 10 segundos en Python. Estos resultados corresponden a las implementaciones y al equipo utilizados en el experimento.
 
 ### 2. Distribución de los tiempos
 
@@ -807,13 +811,13 @@ Los tres valores p fueron inferiores a 0,05. Para decidir cómo interpretarlos, 
 
 Los paneles de la izquierda ayudan a revisar la dispersión de los residuos. En los de la derecha, cuanto más cerca están los puntos de la línea, más se parece su distribución a la normal esperada.
 
-**Los resultados del ANOVA se interpretan como exploratorios.** Las dos pruebas señalaron problemas con los supuestos incluso después de aplicar el logaritmo. Esto también motivó la decisión de omitir **Tukey HSD**, que se había previsto para comparar pares concretos, como C++ y Java para N = 1000. Tukey usa una estimación común de la variabilidad, que en esta corrida podía representar mal la incertidumbre de esas comparaciones. Por eso `tukey.csv` conserva únicamente el encabezado.
+**Los resultados del ANOVA se interpretan como exploratorios.** Las dos pruebas señalaron problemas con los supuestos incluso después de aplicar el logaritmo. Esto también motivó la decisión de omitir **Tukey HSD**, que se había previsto para comparar pares concretos, como C++ y Java para N = 1000. Tukey usa una estimación común de la variabilidad, que en esta ejecución podía representar mal la incertidumbre de esas comparaciones. Por eso `tukey.csv` conserva únicamente el encabezado.
 
 - [ANOVA sobre el logaritmo del tiempo](08_analisis/anova_log.csv) y [ANOVA en segundos](08_analisis/anova.csv)
 - [Pruebas de supuestos](08_analisis/supuestos.csv) y [resumen del análisis](08_analisis/resumen.txt)
 - [Archivo de Tukey](08_analisis/tukey.csv)
 
-### 5. Datos y condiciones de la corrida
+### 5. Datos y condiciones de la ejecución
 
 - [Datos consolidados con las 120 mediciones](05_resultados/benchmark.csv)
 - Mediciones por lenguaje — [C++](05_resultados/cpp.csv), [Go](05_resultados/go.csv), [Java](05_resultados/java.csv) y [Python](05_resultados/python.csv)
