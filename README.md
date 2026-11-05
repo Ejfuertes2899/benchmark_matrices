@@ -753,5 +753,71 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 
 > **Importante:** Mantén Docker Desktop iniciado durante toda la ejecución del pipeline. Puedes minimizar su ventana, pero no salir de la aplicación hasta que termine el proceso.
 
+## Resultados del experimento
+
+Se comparó el tiempo de multiplicación de matrices en C++, Go, Java y Python para tres tamaños: 500, 1000 y 1500. Se hicieron diez mediciones por cada combinación de lenguaje y tamaño, para un total de **120 mediciones**. Las ejecuciones de calentamiento quedaron fuera de ese total.
+
+### 1. Tiempos de multiplicación
+
+La tabla muestra la **mediana del tiempo en segundos**. La mediana representa el centro de las diez mediciones ordenadas y ayuda a resumir el tiempo típico de cada grupo.
+
+| Lenguaje | N = 500 | N = 1000 | N = 1500 |
+|---|---:|---:|---:|
+| C++ | 0,120 | 2,338 | 11,659 |
+| Go | 0,189 | 3,207 | 14,772 |
+| Java | 0,133 | 2,242 | 11,856 |
+| Python | 17,782 | 142,330 | 489,964 |
+
+En esta corrida, **C++ obtuvo la mediana más baja para N = 500 y N = 1500**, mientras que **Java la obtuvo para N = 1000**. Python registró los tiempos más altos en los tres tamaños. Para N = 1500, por ejemplo, la mediana fue de unos 12 segundos en C++ y Java, y de unos 8 minutos y 10 segundos en Python. La comparación corresponde a las implementaciones y al equipo utilizados en el experimento.
+
+[Consultar la tabla descriptiva completa](08_analisis/descriptivos.csv)
+
+### 2. Distribución de los tiempos
+
+Cada caja resume las diez mediciones de un lenguaje para un tamaño determinado. **La línea dentro de la caja indica la mediana** y el ancho de la distribución se aprecia en la altura de la caja. El eje vertical usa una escala logarítmica para que se puedan ver en una misma figura tiempos que van de fracciones de segundo a varios minutos.
+
+![Diagramas de cajas de los tiempos por lenguaje y tamaño de matriz](08_analisis/cajas.png)
+
+### 3. Cómo cambia el tiempo al aumentar el tamaño
+
+Cada línea representa un lenguaje. Los puntos muestran el tiempo medio para cada tamaño. El panel izquierdo presenta las medias en segundos y el derecho presenta las medias del logaritmo de los tiempos. La figura permite observar cuánto crecen los tiempos y cómo cambia la separación entre los lenguajes según el tamaño de la matriz.
+
+![Gráfico de interacción entre lenguaje y tamaño de matriz](08_analisis/interaccion.png)
+
+### 4. Análisis estadístico
+
+Se aplicó un **ANOVA de dos factores con interacción** para estudiar si los tiempos cambian con el lenguaje, con el tamaño y con la combinación de ambos. La interacción responde a esta pregunta: **¿la diferencia entre lenguajes cambia cuando aumenta el tamaño de la matriz?**
+
+El modelo principal se ajustó al **logaritmo del tiempo** debido a la amplia diferencia de magnitudes entre las mediciones.
+
+| Efecto evaluado | Valor p del modelo principal |
+|---|---:|
+| Lenguaje | 1,51 × 10⁻¹⁷⁷ |
+| Tamaño de la matriz | 1,91 × 10⁻¹⁷⁶ |
+| Interacción entre lenguaje y tamaño | 2,07 × 10⁻⁷⁵ |
+
+Los tres valores p fueron inferiores a 0,05. Para decidir cómo interpretarlos, se revisaron dos supuestos del modelo:
+
+| Prueba | Qué se revisó | Resultado en la escala logarítmica |
+|---|---|---|
+| **Shapiro–Wilk** | Si los residuos, las diferencias entre lo observado y lo estimado por el modelo, seguían aproximadamente una distribución normal. | p ≈ 0,000000116. Los residuos se apartaron de la normalidad. |
+| **Levene** | Si las repeticiones tenían una dispersión similar en las 12 combinaciones de lenguaje y tamaño. | p ≈ 0,000116. La dispersión difirió entre grupos. |
+
+![Gráficos de diagnóstico del ANOVA en segundos y en escala logarítmica](08_analisis/diagnostico.png)
+
+Los paneles de la izquierda ayudan a revisar la dispersión de los residuos. En los de la derecha, cuanto más cerca están los puntos de la línea, más se parece su distribución a la normal esperada.
+
+**Los resultados del ANOVA se interpretan como exploratorios.** Las dos pruebas señalaron problemas con los supuestos incluso después de aplicar el logaritmo. Esto también motivó la decisión de omitir **Tukey HSD**, que se había previsto para comparar pares concretos, como C++ y Java para N = 1000. Tukey usa una estimación común de la variabilidad, que en esta corrida podía representar mal la incertidumbre de esas comparaciones. Por eso `tukey.csv` conserva únicamente el encabezado.
+
+- [ANOVA sobre el logaritmo del tiempo](08_analisis/anova_log.csv) y [ANOVA en segundos](08_analisis/anova.csv)
+- [Pruebas de supuestos](08_analisis/supuestos.csv) y [resumen del análisis](08_analisis/resumen.txt)
+- [Archivo de Tukey](08_analisis/tukey.csv)
+
+### 5. Datos y condiciones de la corrida
+
+- [Datos consolidados con las 120 mediciones](05_resultados/benchmark.csv)
+- Mediciones por lenguaje — [C++](05_resultados/cpp.csv), [Go](05_resultados/go.csv), [Java](05_resultados/java.csv) y [Python](05_resultados/python.csv)
+- [Orden de ejecución](05_resultados/orden.csv) y [características del equipo](02_caracteristicas_equipo/caracteristicas_equipo.txt)
+
 
 
