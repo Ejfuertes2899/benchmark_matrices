@@ -160,7 +160,7 @@ La carpeta raíz del proyecto se denomina `avance_semana4/`.
 | `requirements.txt` | Especifica las bibliotecas de Python y las versiones necesarias. |
 | `.dockerignore` | Define qué archivos se excluyen del contexto de construcción de Docker. |
 
-### Carpetas y contenido inicial
+### Carpetas y contenido de descarga
 
 | Carpeta | Contenido |
 | --- | --- |
@@ -168,13 +168,13 @@ La carpeta raíz del proyecto se denomina `avance_semana4/`.
 | `01_docker/go/` | `Dockerfile` de Go. |
 | `01_docker/python/` | `Dockerfile` de Python. |
 | `01_docker/java/` | `Dockerfile` de Java. |
-| `02_caracteristicas_equipo/` | Recibe los registros del equipo y del entorno. |
+| `02_caracteristicas_equipo/` | Registros del equipo y del entorno de la ejecución publicada. |
 | `03_crear matrices/` | `crear_matrices.py`, `manifiesto.json` y las subcarpetas `500/`, `1000/` y `1500/`. Cada subcarpeta contiene `a.txt`, `b.txt` y `control.txt`. |
 | `04_programas_matrices/` | `matrices.cpp`, `matrices.go`, `matrices.py` y `Matrices.java`. |
-| `05_resultados/` | Recibe las mediciones y los registros de ejecución. |
+| `05_resultados/` | Cuatro CSV por lenguaje, `benchmark.csv` y registros de la ejecución publicada. |
 | `06_revisión de archivos/` | `revisar_archivos.py`. |
 | `07_workflow/` | `ejecutar.py`, `integrar.py`, `analizar.py` y `registrar_equipo.py`. |
-| `08_analisis/` | Recibe las tablas estadísticas, los gráficos y el resumen. |
+| `08_analisis/` | Tablas estadísticas, gráficos y resumen de los resultados publicados. |
 
 **Conserva los nombres de los archivos y las carpetas**, incluidos los espacios, las tildes y las mayúsculas. Cuando una ruta contiene espacios, escríbela entre comillas, como se muestra en los comandos de esta guía.
 
@@ -524,18 +524,18 @@ Con el entorno virtual activo, ejecuta:
 python "06_revisión de archivos/revisar_archivos.py"
 ```
 
-En una copia inicial sin resultados previos, el contador esperado es:
+El script revisa las matrices y los CSV incluidos en la descarga.Para esta versión, que incluye los resultados publicados, la salida esperada es:
 
 ```text
-Total: 0/120 mediciones válidas.
+Total: 120/120 mediciones válidas.
 ```
 
-Este contador indica que todavía no hay mediciones registradas. **Por sí solo no confirma que las entradas sean correctas**: revisa también los demás mensajes del script y resuelve los errores que señale antes de ejecutar el experimento. Si ya existen resultados, el contador puede ser diferente.
+Estas son las mediciones publicadas que venían en la descarga.
 
 ### 7.2. Simular la ejecución
 
 ```bash
-snakemake --cores 1 --dry-run
+snakemake --cores 1 --forceall --rerun-incomplete --dry-run
 ```
 
 La opción `--dry-run` muestra las tareas previstas sin ejecutar el experimento. Para una ejecución inicial, las reglas esperadas son:
@@ -547,15 +547,15 @@ La opción `--dry-run` muestra las tareas previstas sin ejecutar el experimento.
 | `analizar` | Generar el análisis estadístico y sus productos. |
 | `all` | Agrupar los objetivos finales del flujo. |
 
-Si las salidas ya existen y están actualizadas, Snakemake puede indicar que no hay tareas pendientes.
+Con --forceall, el plan incluye las etapas de medición, integración y análisis aunque las salidas ya existan.
 
 ### 7.3. Ejecutar el experimento
 
 ```bash
-snakemake --cores 1 --rerun-incomplete
+snakemake --cores 1 --forceall --rerun-incomplete
 ```
 
-La opción `--rerun-incomplete` permite volver a ejecutar las tareas cuyas salidas Snakemake reconoce como incompletas.
+--forceall vuelve a ejecutar todas las etapas aunque la descarga ya contenga resultados. --rerun-incomplete permite rehacer las tareas que Snakemake haya marcado como incompletas. Cuando termine correctamente, las 120 mediciones nuevas y su análisis estarán guardados en las carpetas de salida de la copia de trabajo, en lugar de los archivos descargados.
 
 El flujo está preparado para:
 
@@ -566,13 +566,13 @@ El flujo está preparado para:
 5. Integrar las mediciones en `05_resultados/benchmark.csv`.
 6. Generar las tablas, los gráficos y el resumen en `08_analisis/`.
 
-**Mantén `--cores 1` para seguir la configuración de esta guía.** Esta opción controla la planificación de Snakemake; no establece por sí sola un límite de CPU para cada contenedor.
+**Mantén `--cores 1` para seguir la configuración de esta guía.**
 
 <a id="archivos"></a>
 
 ## 8. Archivos generados
 
-La salida prevista comprende **23 archivos principales**, distribuidos en tres carpetas:
+Al completar la reproducción, se habrán actualizado los 23 archivos principales de la copia de trabajo, distribuidos en tres carpetas:
 
 | Carpeta | Cantidad | Contenido |
 | --- | ---: | --- |
@@ -745,8 +745,8 @@ En el Explorador podrás revisar los registros en `02_caracteristicas_equipo/`, 
 | Falta alguna imagen `matrices-*:semana4`. | Ejecuta el comando de construcción correspondiente y revisa su salida. |
 | Una ruta con espacios no se reconoce. | Conserva las comillas, los espacios y las tildes tal como aparecen en la guía. |
 | La revisión inicial muestra `0/120`. | Es lo esperado si todavía no se ha ejecutado el experimento; revisa también el resto de los mensajes del verificador. |
-| La revisión final muestra menos de 120 mediciones válidas. | Revisa la salida de Snakemake y `05_resultados/ejecucion.log`; corrige el error antes de volver a ejecutar el flujo. |
-| Snakemake indica que no hay tareas pendientes. | Comprueba si las salidas ya existen y están actualizadas; esto no implica un fallo. |
+| La revisión inicial muestra `0/120`. | Revisa si copiaste los cuatro CSV publicados de `05_resultados/`. La versión descargada con resultados debe mostrar `120/120`. |
+| Snakemake indica que no hay tareas pendientes. | Comprueba que estás en la carpeta que contiene `Snakefile` y que usaste el comando del apartado 7.3 con `--forceall`. |
 
 > **Importante:** Mantén Docker Desktop iniciado durante toda la ejecución del pipeline. Puedes minimizar su ventana, pero no salir de la aplicación hasta que termine el proceso.
 
