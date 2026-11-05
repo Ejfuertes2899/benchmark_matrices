@@ -779,11 +779,15 @@ Cada caja resume las diez mediciones de un lenguaje para un tamaño determinado.
 
 ![Diagramas de cajas de los tiempos por lenguaje y tamaño de matriz](08_analisis/cajas.png)
 
+Esta figura se encuentra: 08_analisis/cajas.png
+
 ### 3. Cómo cambia el tiempo al aumentar el tamaño
 
 Cada línea representa un lenguaje. Los puntos muestran el tiempo medio para cada tamaño. El panel izquierdo presenta las medias en segundos y el derecho presenta las medias del logaritmo de los tiempos. La figura permite observar cuánto crecen los tiempos y cómo cambia la separación entre los lenguajes según el tamaño de la matriz.
 
 ![Gráfico de interacción entre lenguaje y tamaño de matriz](08_analisis/interaccion.png)
+
+Esta figura se encuentra: 08_analisis/interaccion.png
 
 ### 4. Análisis estadístico
 
@@ -805,6 +809,8 @@ Los tres valores p fueron inferiores a 0,05. Para decidir cómo interpretarlos, 
 | **Levene** | Si las repeticiones tenían una dispersión similar en las 12 combinaciones de lenguaje y tamaño. | p ≈ 0,000116. La dispersión difirió entre grupos. |
 
 ![Gráficos de diagnóstico del ANOVA en segundos y en escala logarítmica](08_analisis/diagnostico.png)
+
+Esta figura se encuentra: 08_analisis/diagnostico.png
 
 Los paneles de la izquierda ayudan a revisar la dispersión de los residuos. En los de la derecha, cuanto más cerca están los puntos de la línea, más se parece su distribución a la normal esperada.
 
