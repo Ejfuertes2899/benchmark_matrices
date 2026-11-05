@@ -773,7 +773,7 @@ Cada fila resume las **10 mediciones** de un lenguaje para un tamaño de matriz.
 
 En esta ejecución, **C++ obtuvo la mediana más baja para N = 500 y N = 1500**, mientras que **Java la obtuvo para N = 1000**. Python registró las medianas más altas en los tres tamaños. Para N = 1500, la mediana fue de unos 12 segundos en C++ y Java, y de unos 8 minutos y 10 segundos en Python. Estos resultados corresponden a las implementaciones y al equipo utilizados en el experimento.
 
-Esta tabla se encuentra: 08_analisis/descriptivos.csv
+Esta tabla se encuentra en: 08_analisis/descriptivos.csv
 
 ### 2. Distribución de los tiempos
 
@@ -781,7 +781,7 @@ Cada caja resume las diez mediciones de un lenguaje para un tamaño determinado.
 
 ![Diagramas de cajas de los tiempos por lenguaje y tamaño de matriz](08_analisis/cajas.png)
 
-Esta figura se encuentra: 08_analisis/cajas.png
+Esta figura se encuentra en: 08_analisis/cajas.png
 
 ### 3. Cómo cambia el tiempo al aumentar el tamaño
 
@@ -789,7 +789,7 @@ Cada línea representa un lenguaje. Los puntos muestran el tiempo medio para cad
 
 ![Gráfico de interacción entre lenguaje y tamaño de matriz](08_analisis/interaccion.png)
 
-Esta figura se encuentra: 08_analisis/interaccion.png
+Esta figura se encuentra en: 08_analisis/interaccion.png
 
 ### 4. Análisis estadístico
 
@@ -812,7 +812,7 @@ Los tres valores p fueron inferiores a 0,05. Para decidir cómo interpretarlos, 
 
 ![Gráficos de diagnóstico del ANOVA en segundos y en escala logarítmica](08_analisis/diagnostico.png)
 
-Esta figura se encuentra: 08_analisis/diagnostico.png
+Esta figura se encuentra en: 08_analisis/diagnostico.png
 
 Los paneles de la izquierda ayudan a revisar la dispersión de los residuos. En los de la derecha, cuanto más cerca están los puntos de la línea, más se parece su distribución a la normal esperada.
 
