@@ -820,5 +820,10 @@ Como **Tukey HSD** supone que los grupos tienen una variabilidad similar, se dec
 
 Esta figura se encuentra en: 08_analisis/diagnostico.png
 
+## Versión archivada en Zenodo
+
+La versión 1.0.0 del artifact está disponible en Zenodo.
+
+[Descargar el artefacto y consultar su DOI](https://doi.org/10.5281/zenodo.23988249)
 
 
