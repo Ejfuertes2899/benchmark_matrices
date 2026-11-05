@@ -1,8 +1,0 @@
-.git/
-**/__pycache__/
-**/*.pyc
-**/*.exe
-**/*.class
-
-02_caracteristicas_equipo/
-05_resultados/
